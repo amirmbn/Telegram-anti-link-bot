@@ -1,5 +1,5 @@
 <h1>New Telegram Anti-Spam and Anti-Link bot</h1>
-<br>
+<p>The main language of the robot is Farsi, but English will be added soon</p>
 <br>
 <h2>How to use the robot</h2>
 <p>First, you have to create a bot in telegram botfather</p>
