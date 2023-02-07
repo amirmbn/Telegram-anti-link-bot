@@ -2,7 +2,7 @@
 
 ob_start();
 error_reporting(0);
-define('API_KEY','1600111030:AAG_kfDqAhJefcSv5839zCTNHr1hQfkeNb8');
+define('API_KEY','Insert Telegram API Token');
 function bot($method,$data) {
   $url = "https://api.telegram.org/bot".API_KEY."/".$method;
   $ch = curl_init();
@@ -14,10 +14,10 @@ function bot($method,$data) {
   curl_close($ch);
   return $result;
 }
-$Dev = array("1388951901");
-@$sudo = "amirmbn";
-@$usernamebot = "tminfinity_bot";
-@$channel = "tm_infinity";
+$Dev = array("Admin Telegram ID Number");
+@$sudo = "Admin Username"; // (Without @)
+@$usernamebot = "BOT Username"; // (Without @)
+@$channel = "Channel Username";
 @$token = API_KEY;
 $update = json_decode(file_get_contents('php://input'));
 @$message = $update->message;
