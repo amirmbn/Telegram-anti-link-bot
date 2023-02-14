@@ -73,16 +73,16 @@ $endtime = $ingettime + $gettime2 ;
     'reply_markup'=>json_encode([
     'resize_keyboard'=>true,
     'inline_keyboard'=>[
-            [
-                ['text'=>"شارژ گروه : $endtime روز",'callback_data'=>'text']
-            ],
-            [
-                ['text'=>"تاریخ اتمام شارژ : $ndate",'callback_data'=>'text']
-            ],
-            [
-				['text'=>"خروج",'callback_data'=>'exit']
-			],
-            ]
+	[
+		['text'=>"شارژ گروه : $endtime روز",'callback_data'=>'text']
+	],
+	[
+		['text'=>"تاریخ اتمام شارژ : $ndate",'callback_data'=>'text']
+	],
+	[
+		['text'=>"خروج",'callback_data'=>'exit']
+	],
+	]
         ])
         ]);
 }
@@ -119,23 +119,23 @@ $endtime = $ingettime + $gettime2 ;
     'reply_markup'=>json_encode([
     'resize_keyboard'=>true,
     'inline_keyboard'=>[
-            [
-                ['text'=>"شارژ گروه : $endtime روز",'callback_data'=>'text']
-            ],
-            [
-                ['text'=>"تاریخ اتمام شارژ : $ndate",'callback_data'=>'text']
-            ],
-            [
-				['text'=>"خروج",'callback_data'=>'exit']
-			],
-            ]
+	[
+		['text'=>"شارژ گروه : $endtime روز",'callback_data'=>'text']
+	],
+	[
+		['text'=>"تاریخ اتمام شارژ : $ndate",'callback_data'=>'text']
+	],
+	[
+		['text'=>"خروج",'callback_data'=>'exit']
+	],
+	]
         ])
         ]);
 }
 else{
 	bot('answerCallbackQuery',[
-    'callback_query_id'=>$membercall,
-    'text'=>"شما مدیر ربات نیستید ⚠️",
+	'callback_query_id'=>$membercall,
+	'text'=>"شما مدیر ربات نیستید ⚠️",
 ]);
 }
 }
@@ -275,10 +275,10 @@ $rdate = $settings2["information"]["dataadded"];
 به زودی پشتیبان درخواست شمارا برسی میکند.",
     'reply_markup'=>json_encode([
     'inline_keyboard'=>[
-		    [
-			    ['text'=>"برگشت ≫",'callback_data'=>'groupe']
-			],
-            ]
+	[
+		['text'=>"برگشت ≫",'callback_data'=>'groupe']
+	],
+	]
         ])
         ]);
     bot('sendmessage',[
@@ -300,8 +300,8 @@ $rdate = $settings2["information"]["dataadded"];
 }
 else{
 	bot('answerCallbackQuery',[
-    'callback_query_id'=>$membercall,
-    'text'=>"شما مدیر ربات نیستید ⚠️",
+	'callback_query_id'=>$membercall,
+	'text'=>"شما مدیر ربات نیستید ⚠️",
 ]);
 }
 }
@@ -314,19 +314,19 @@ $ping = pingDomain($_SERVER['HTTP_HOST']);
 $array = ["2.0","2.1","2.2","2.3","2.4","2.5","2.6","2.7","2.8","2.9","3.0","3.1","3.2","3.3","3.4","3.5","3.6","3.7","3.8"];
 $rand = array_rand($array);
 $teleping = $array[$rand] + $ping;
-    bot('sendVideoNote',[
-    'chat_id'=>$chat_id,
+	bot('sendVideoNote',[
+	'chat_id'=>$chat_id,
 	'video_note'=>new CURLFile("other/ping.mp4"),
-    'reply_markup'=>json_encode([
-    'resize_keyboard'=>true,
-    'inline_keyboard'=>[
-            [
-                ['text'=>"پینگ سرور : $ping میلی ثانیه",'callback_data'=>'text']
-            ],
-            [
-                ['text'=>"پینگ به تلگرام : $teleping میلی ثانیه",'callback_data'=>'text']
-            ],
-            ]
+	'reply_markup'=>json_encode([
+	'resize_keyboard'=>true,
+	'inline_keyboard'=>[
+		[
+			['text'=>"پینگ سرور : $ping میلی ثانیه",'callback_data'=>'text']
+		],
+		[
+			['text'=>"پینگ به تلگرام : $teleping میلی ثانیه",'callback_data'=>'text']
+		],
+	]
         ])
 ]);
 } 
@@ -598,7 +598,7 @@ $cuphoto = $getuserprofile->total_count;
 🖼 تعداد عکس پروفایل : $cuphoto
 ━┅┄┄┄┄┄┄┄┄┄
 🔗لینک شما : http://t.me/$username",
-    'reply_to_message_id'=>$message_id,
+	'reply_to_message_id'=>$message_id,
 ]);
 }
 }
