@@ -2,7 +2,7 @@
 
 ob_start();
 error_reporting(0);
-define('API_KEY','Insert Telegram API Token');
+define('API_KEY','API Token'); //Enter the APT Token of the Telegram bot here
 function bot($method,$data) {
   $url = "https://api.telegram.org/bot".API_KEY."/".$method;
   $ch = curl_init();
@@ -14,10 +14,10 @@ function bot($method,$data) {
   curl_close($ch);
   return $result;
 }
-$Dev = array("Admin Telegram ID Number");
-@$sudo = "Admin Username"; // (Without @)
-@$usernamebot = "BOT Username"; // (Without @)
-@$channel = "Channel Username";
+$Dev = array("XXXXXXX"); //Enter the details of the Telegram bot here
+@$sudo = "Enter Admin Username"; //Without @
+@$usernamebot = "Enter BOT Username"; //Without @
+@$channel = "Enter Channel Username";
 @$token = API_KEY;
 $update = json_decode(file_get_contents('php://input'));
 @$message = $update->message;
@@ -78,14 +78,14 @@ function SendMessage($chat_id, $text) {
     'parse_mode'=>'MarkDown']);
 }
 function EditMessageText($chat_id, $message_id, $text, $mode = null, $keyboard = null, $disable_web_page_preview = null){
-	bot('EditMessageText',[
+    bot('EditMessageText',[
 	'chat_id'=>$chat_id,
 	'message_id'=>$message_id,
 	'text'=>$text,
 	'parse_mode'=>$mode,
 	'reply_markup'=>$keyboard,
 	'disable_web_page_preview'=>$disable_web_page_preview
-]);
+    ]);
 }
 function Forward($berekoja,$azchejaei,$kodompayam) {
     bot('ForwardMessage',[
